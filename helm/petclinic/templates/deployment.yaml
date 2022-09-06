@@ -21,15 +21,15 @@ spec:
     spec:
       containers:
       - name: petclinic-container
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: blueprints2009/petclinic:5
         imagePullPolicy: Always
         resources:
           limits:
             cpu: '1'
-            memory: '1G'
+            memory: '500Mi'
           requests:
             cpu: '1'
-            memory: '1G'
+            memory: '500Mi'
         ports:
         - containerPort: 8080
       imagePullSecrets:
